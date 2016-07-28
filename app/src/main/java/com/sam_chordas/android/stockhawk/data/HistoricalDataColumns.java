@@ -6,9 +6,9 @@ import net.simonvt.schematic.annotation.NotNull;
 import net.simonvt.schematic.annotation.PrimaryKey;
 
 /**
- * Created by sam_chordas on 10/5/15.
+ * Created by bryce on 6/9/16.
  */
-public class QuoteColumns {
+public class HistoricalDataColumns {
     @DataType(DataType.Type.INTEGER)
     @PrimaryKey
     @AutoIncrement
@@ -18,19 +18,23 @@ public class QuoteColumns {
     public static final String SYMBOL = "symbol";
     @DataType(DataType.Type.TEXT)
     @NotNull
-    public static final String PERCENT_CHANGE = "percent_change";
+    public static final String DATE_STRING = "date_string";
+    @DataType(DataType.Type.REAL)
+    @NotNull
+    public static final String DATE = "date";
     @DataType(DataType.Type.TEXT)
     @NotNull
-    public static final String CHANGE = "change";
+    public static final String OPEN = "open";
     @DataType(DataType.Type.TEXT)
     @NotNull
-    public static final String BIDPRICE = "bid_price";
+    public static final String HIGH = "high";
     @DataType(DataType.Type.TEXT)
-    public static final String CREATED = "created";
-    @DataType(DataType.Type.INTEGER)
     @NotNull
-    public static final String ISUP = "is_up";
-    @DataType(DataType.Type.INTEGER)
+    public static final String LOW = "low";
+    @DataType(DataType.Type.TEXT)
     @NotNull
-    public static final String ISCURRENT = "is_current";
+    public static final String CLOSE = "close";
+    @DataType(DataType.Type.TEXT)
+    @NotNull
+    public static final String VOLUME = "volume";
 }
